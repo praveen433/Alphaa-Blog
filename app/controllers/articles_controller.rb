@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    
     @article = Article.new
   end
 
@@ -23,7 +24,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    
+
     @article = Article.new(article_params)
     @article.user = User.first
     if @article.save
